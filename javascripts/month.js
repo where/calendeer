@@ -49,9 +49,7 @@ $(function(){
       }
       this.name = this._names.en[ this.month ];
       this.daysInMonth = (function(){
-        month = (self.month + 1) % 11;
-        year = self.month === 11  ? self.year + 1 : self.year;
-        return ( new Date( year, month, 0 ) ).getDate();
+        return ( new Date( self.year, self.month + 1, 0 ) ).getDate();
       })();
       this.dateObject = new Date( this.year, this.month, 1 );
       this.render();
