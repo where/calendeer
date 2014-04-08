@@ -226,7 +226,7 @@ $(function(){
         }
       } );
 
-      $input.on( "keyup.calendeer." + type, { type: type, scope: this }, this.inputTimeHandler );
+      $input.on( "change.calendeer." + type, { type: type, scope: this }, this.inputTimeHandler );
       $input.on( "focus.calendeer." + type, { type: type, scope: this }, $.proxy( function(e) {
         this.toggleTimeFocused(e.data.type);
         this.show( e.data.type );
@@ -247,7 +247,7 @@ $(function(){
         }
       } );
 
-      $input.on( "keyup.calendeer." + type, { type: type, scope: this }, this.inputHandler );
+      $input.on( "change.calendeer." + type, { type: type, scope: this }, this.inputHandler );
       $input.on( "focus.calendeer." + type, { type: type, scope: this }, $.proxy( function(e) {
         this.toggleFocused( e.data.type );
         this.show( e.data.type );
