@@ -55,6 +55,16 @@ $(function() {
       defaultEndTime: endDate
     } );
 
+    $(this).bind( "setDate", function(e, type, isoDate, dateObject) {
+      if(isoDate === undefined) {
+        if(type === "start") {
+          $startHidden.val("");
+        } else {
+          $endHidden.val("");
+        }
+      }
+    });
+
     // update the hidden input's time representation on every setDateTime call
     $(this).bind( "setDateTime", function( e, type, isoDate, dateObject ) {
       if (!calendeer.options.useSugar) {
