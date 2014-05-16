@@ -189,6 +189,8 @@ $(function(){
 
       if ( isValid ) {
         data.scope.setDate( data.type, Utils.trimDate(date), true );
+      } else {
+        data.scope.setDate( data.type, undefined, true );
       }
     },
     inputTimeHandler: function( event ) {
