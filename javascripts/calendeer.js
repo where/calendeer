@@ -509,10 +509,6 @@ $(function(){
       if ( dateTime != undefined ) {
         this.emitEvent( "setDateTime", [type, Utils.toISO(dateTime), dateTime] );
       }
-      if ( ! fromHandler ) {
-        this.toggleInputHighlighting();
-        this.toggleFocused();
-      }
       return this;
     },
     setTime: function( type, date, fromHandler ) {
